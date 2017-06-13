@@ -1,0 +1,1698 @@
+@import "sprite"
+
+$c-black: #000
+$c-white: #fff
+$c-red: #bb1d26
+$c-gray: #EAEAEA
+$c-gray-dark: #DADADA
+$c-yellow: #FDFF69
+
+$fz: 16px
+$ff1: 'Roboto', sans-serif
+$ff2: 'Intro', sans-serif
+
+
+*
+	margin: 0
+	padding: 0
+
+body
+	font: $fz $ff1
+	color: $c-black
+	background: $c-white
+	box-sizing: border-box
+
+html, body, header, article, aside, main, footer, div, h1, h2, h3, h4, h5, h6, button, .show, .block
+	display: block
+
+.inline-block
+	display: inline-block
+
+meta, script, style, .hidden
+	display: none
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+
+h1
+	font-size: 24px
+h2
+	font-size: 20px
+h3
+	font-size: 16px
+h4
+	font-size: 14px
+h5
+	font-size: 12px
+h6
+	font-size: 10px
+
+
+
+a
+	color: $c-black
+	text-decoration: none
+
+button, input[type="submit"]
+	cursor: pointer
+
+button, input, textarea
+	display: block
+	outline: none
+	border: none
+	background: none
+	font-family: $ff1
+	box-sizing: border-box
+
+
+.input, .textarea
+	margin-bottom: 12px
+	padding: 21px 44.5px
+	font-weight: 300
+	border-radius: 4px
+	width: 100%
+	background: $c-white
+.textarea
+	height: 87px
+
+textarea
+	resize: none
+
+ul, ol
+	margin: 0
+	li
+		list-style: none
+
+ul
+	&.inline-blocks
+		li
+			display: inline-block
+
+
+::placeholder
+	color: #434343
+
+
+.tal
+	text-align: left
+
+.tac
+	text-align: center
+
+.tar
+	text-align: right
+
+.ttc
+	text-transform: capitalize
+
+.upper
+	text-transform: uppercase
+
+i.icon
+	display: inline-block
+
+.italic, i
+	font-style: italic
+
+.normal, var
+	font-style: normal
+
+.light
+	font-weight: 300
+
+.medium
+	font-weight: 500
+
+.bold, b, strong
+	font-weight: bold
+
+.button, button
+	display: block
+	text-align: center
+	cursor: pointer
+
+.button_angle-red
+	position: relative
+	color: $c-white
+	background-color: $c-red
+	line-height: 33px
+	padding-left: 22px
+	padding-right: 25px
+	font-weight: 300
+	font-size: 16px
+	&:before, &:after
+		z-index: 1
+		position: absolute
+		display: block
+		content: ''
+		width: 0
+		height: 0
+		border-style: solid
+		top: 0
+	&:before
+		left: -7px
+		border-width: 0 0px 33px 7.5px
+		border-color: transparent transparent $c-red transparent
+	&:after
+		right: 0px
+		border-width: 0 0px 33px 7.5px
+		border-color: transparent transparent $c-white transparent
+
+.button_angle-gray
+	position: relative
+	font-size: 16px
+	background-image: url("../img/bg/button_angle-gray.png")
+	background-repeat: no-repeat
+	background-position: center
+	width: 182px
+	height: 33px
+	line-height: 33px
+
+
+.button_yellow
+	font-weight: bold
+	background-color: $c-yellow
+	width: 217px
+	font-size: 14px
+	border-radius: 3px
+	padding-top: 8px
+	padding-bottom: 8px
+	text-transform: uppercase
+	margin-left: auto
+	margin-right: auto
+	line-height: 18px
+
+.button_yellow_round
+	background-color: $c-yellow
+	border-radius: 30px
+	font-size: 17px
+	font-weight: bold
+	line-height: 57px
+	margin-top: 25px
+	width: 100%
+
+.button_red-round
+	width: 260px
+	height: 52px
+	line-height: 55px
+	margin-left: auto
+	margin-right: auto
+	font-size: 20px
+	text-transform: uppercase
+	color: $c-white
+	background: $c-red
+	border-radius: 30px
+	border-bottom: 3px solid #9F2129
+
+.button-red
+	background-color: $c-red
+	color: $c-white
+	text-transform: uppercase
+	font-size: 15px
+	font-weight: bold
+	border-radius: 2px
+	line-height: 40px
+
+.button_add-cart
+	font-size: 15px
+	font-weight: bold
+	text-transform: uppercase
+	color: $c-white
+	background-color: $c-red
+	i
+		margin-right: 11px
+
+.button-more
+	font-weight: 300
+	text-decoration: underline
+	color: #373737
+
+
+.container
+	position: relative
+	width: 940px
+	margin: 0 auto
+	padding-left: 15px
+	padding-right: 15px
+
+	.container
+		padding-left: 0
+		padding-right: 0
+
+
+.container, .row, .clearfix
+	&:before, &:after
+		display: table
+		content: ''
+		box-sizing: border-box
+	&:after
+		clear: both
+
+
+
+.w2 > .col
+	width: 50%
+.w3 > .col
+	width: 33.333333333%
+.w4 > .col
+	width: 25%
+.w5 > .col
+	width: 20%
+.w6 > .col
+	width: 16.666666667%
+
+
+.col
+	display: block
+	float: left
+	min-height: 1px
+	box-sizing: border-box
+
+.left
+	float: left
+
+.right
+	float: right
+
+.rotate180
+	transform: rotate(180deg)
+
+
+button#sticks
+	position: relative
+	display: inline-block
+	width: 17px
+	margin-right: 7px
+	top: 0.5px
+	span
+		display: block
+		position: relative
+		width: 17px
+		height: 2px
+		background: $c-white	
+		margin-left: auto
+		margin-right: auto
+		transition: .5s
+		&:nth-of-type(1)
+			margin-left: 2px
+		&:nth-of-type(2)
+			margin: 3px auto
+			margin-left: 1px
+	&.close
+		span
+			&:nth-of-type(1)
+				transform: rotate(135deg)
+			&:nth-of-type(2)
+				display: none
+			&:nth-of-type(3)
+				margin-top: -4px
+				transform: rotate(-135deg)
+
+.popup
+	display: none
+	z-index: 999
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	.popup__wrapper
+		display: none
+		z-index: 1000
+		position: relative
+		
+		padding: 20px
+		background: #EAEAEA
+		box-sizing: border-box
+		margin-left: auto
+		margin-right: auto
+		margin-top: 20px
+		border-radius: 3px
+		.title
+			display: block
+			text-align: center
+			margin-bottom: 20px
+			font-size: 28px
+		.message
+			display: none
+		
+	.popup__wrapper_modal__this
+		padding-right: 10px
+		overflow-y: scroll
+		height: 580px
+		margin-top: 20px
+		
+		p
+			margin-bottom: 20px
+	.popup__wrapper_modal
+		width: 540px
+		height: 645px
+
+	.popup__wrapper_callback, .popup__wrapper_feedback
+		width: 400px
+
+	::-webkit-scrollbar 
+		width: 6px
+		height: 2px
+
+	::-webkit-scrollbar-button 
+		width: 0px
+		height: 0px
+
+	::-webkit-scrollbar-thumb 
+		background: $c-red
+		border: 0px none #ffffff
+		border-radius: 80px
+
+
+	::-webkit-scrollbar-track 
+		background: #DDDDDD
+		border: none
+		border-radius: 45px
+		border-left: 1px solid #ABABAB
+
+
+	::-webkit-scrollbar-corner 
+		background: transparent
+		
+
+	.popup__wrapper_callback
+		display: none
+	.popup__close
+		position: absolute
+		top: 0px
+		right: 20px
+		width: 26px
+		height: 26px
+		background: $c-red
+		text-align: center
+		padding-top: 4px
+		box-sizing: border-box
+		cursor: pointer
+
+	.popup__bg
+		z-index: 999
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background: rgba(0,0,0,.5)
+
+
+.bg-black
+	background: $c-black
+.bg-white
+	background: $c-white
+.bg-red
+	background: $c-red
+.bg-gray
+	background: $c-gray
+
+.color-black
+	color: $c-black
+.color-white
+	color: $c-white
+.color-red
+	color: $c-red
+.color-gray
+	color: $c-gray
+.fz14
+	font-size: 14px
+.fz15
+	font-size: 15px
+.fz17
+	font-size: 17px
+.fz20
+	font-size: 20px
+.fz21
+	font-size: 21px
+.fz22
+	font-size: 22px
+.fz30
+	font-size: 30px
+
+
+.title
+	font-size: 42px
+	font-family: $ff2
+	text-align: center
+	// color: #2d2d2d
+
+
+.slider
+.slick-arrow
+	&:before
+		display: none
+
+
+
+.header
+	padding-top: 15px
+	background-repeat: no-repeat
+	background-position: center top
+	background-image: url("../img/bg/top_main.png")
+
+	&.sub
+		padding-top: 55px
+		background-image: url("../img/bg/top_sub.png")
+
+.panel
+	padding-bottom: 20px
+
+.panel__nav
+	padding-top: 17px
+	padding-left: 58px
+	.color-gray
+		color: #666666
+	.fz17
+		margin-top: 2px
+		margin-bottom: 10px
+
+.panel__nav__list
+	li
+		&:after
+			display: inline-block
+			content: '|'
+			margin-left: 9px
+			margin-right: 6px
+		&:last-of-type
+			&:after
+				display: none
+	a
+		&:hover
+			color: $c-red
+			border-bottom: 1px solid $c-red
+
+.panel__feedback
+	padding-top: 15px
+
+
+
+
+.feedback__phone
+	display: block
+	position: relative
+	margin-bottom: 11px
+	&:before
+		position: absolute
+		content: ''
+		@include sprite($tel)
+		left: -60px
+
+.panel__feedback__button
+	float: right
+
+
+.menu
+	padding-top: 22px
+	padding-bottom: 22px
+	text-align: center
+	&.fixedMenu
+		z-index: 900
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		width: 100%
+
+.menu__list
+	display: inline-block
+	color: $c-white
+
+.menu__item
+	&:after
+		display: inline-block
+		content: '|'
+		margin-left: 25px
+		margin-right: 22px
+	&:last-of-type
+		&:after
+			display: none
+
+.menu__link
+	color: $c-white
+
+.banner
+	height: 490px
+
+.banner__main
+	background-image: url("../img/bg/banner/main.jpg")
+	background-repeat: no-repeat
+	background-position: center top
+
+.banner__main__sub
+	padding-top: 50px
+	box-sizing: border-box
+
+.banner__main__container
+	position: relative
+
+.banner_main__img
+	position: absolute
+	top: 30px
+	right: -30px
+
+.banner__main__title
+	width: 630px
+	text-align: left
+	font-size: 42px
+	color: #3d3d3d
+	padding-top: 100px
+	line-height: 44px
+
+.banner__partner
+	color: $c-white
+	padding-top: 32px
+	background-image: url("../img/bg/banner/partners.jpg")
+	background-repeat: no-repeat
+	background-position: center top
+	box-sizing: border-box
+
+.banner__partner__title
+	font-size: 42px
+	margin-bottom: 30px
+
+.banner__partner__col
+	p
+		font-size: 20px
+		line-height: 22px
+		margin-bottom: 20px
+	&:nth-of-type(2)
+		padding-left: 20px
+.banner__partner__col__title
+	font-size: 24px
+	font-family: $ff2
+	text-align: center
+	width: 200px
+	padding: 7px 15px
+	margin-left: auto
+	margin-right: auto
+	margin-bottom: 20px
+	background-color: $c-red
+	border-radius: 20px
+	
+.banner__partner__button
+	margin-top: 30px
+
+
+.advantages
+	padding-bottom: 35px
+
+.advantages__list
+	margin-top: -44px
+
+.advantages__item
+	position: relative
+	&:last-of-type
+		&:after
+			z-index: 2
+			content: ''
+			position: absolute
+			width: 0
+			height: 0
+			border-style: solid
+			right: -15px
+			border-width: 88px 15px 0 0px
+			border-color: $c-red transparent transparent transparent
+
+
+
+.advantages__icon, .advantages__text
+	float: left
+	height: 88px
+
+
+
+
+.advantages__icon
+	position: relative
+	background-color: $c-white
+	width: 75px
+	text-align: center
+	box-sizing: border-box
+	i
+		margin-top: 30px
+		&.icon-advantages-cart
+			margin-left: 10px
+		&.icon-advantages-quality
+			margin-top: 25px
+	&:before, &:after
+		z-index: 2
+		content: ''
+		position: absolute
+		width: 0
+		height: 0
+		border-style: solid
+	&:before
+		left: -15px
+		border-width: 0 0px 88px 15px
+		border-color: transparent transparent $c-white transparent
+	&:after
+		right: -15px
+		border-width: 88px 15px 0 0px
+		border-color: $c-white transparent transparent transparent
+
+.advantages__text
+	position: relative
+	color: $c-white
+	background-color: $c-red
+	font-size: 20px
+	line-height: 20px
+	width: 238px
+	box-sizing: border-box
+	padding-left: 40px
+	padding-top: 25px
+
+
+.advantages__button
+	margin-top: 55px
+
+.filter
+	padding-bottom: 60px
+
+.filter__title
+	padding-bottom: 50px
+
+.filter__slider
+	width: 700px
+	margin-left: auto
+	margin-right: auto
+	.slick-arrow
+		top: 65px
+	.slick-prev
+		left: -65px
+	.slick-next
+		right: -65px
+
+.filter__slider__item
+	padding-left: 12px
+	padding-right: 12px
+
+.filter__slider__item__img
+	display: table-cell
+	border: 1px solid #E2E2E2
+	box-sizing: border-box
+	width: 206px
+	height: 137px
+	text-align: center
+	vertical-align: middle
+	img
+		margin-left: auto
+		margin-right: auto
+
+.filter__slider__item__button
+	margin-top: 12px
+	width: 206px
+
+
+.products
+	padding-top: 33px
+	padding-bottom: 40px
+
+.products__title
+	font-size: 15px
+	font-weight: bold
+	text-transform: uppercase
+	margin-bottom: 15px
+
+.products__nav
+	text-align: center
+	text-transform: uppercase
+	margin-bottom: 28px
+	font-weight: bold
+	font-size: 15px
+	margin-left: -25px
+	margin-right: -25px
+	li
+		display: inline-block
+		padding: 9px 12.5px
+		border-radius: 20px
+		cursor: pointer
+		&.select, &:hover
+			color: $c-white
+			background-color: $c-red
+
+
+.products__range__this
+	width: 100%
+.products__range__this 
+	-webkit-appearance: none
+	margin: 18px 0
+	width: 100%
+
+.products__range__this:focus 
+	outline: none
+
+.products__range__this::-webkit-slider-runnable-track
+	width: 100%
+	height: 8px
+	cursor: pointer
+	animate: 0.2s
+	// box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d
+	background: #C1C1C1
+	border-radius: 1.3px
+	border-radius: 10px
+	border-top: 1px solid #A2A2A2
+	border-bottom: 1px solid $c-white
+
+.products__range__this::-webkit-slider-thumb 
+	border: none
+	height: 22px
+	width: 22px
+	border-radius: 50%
+	background: $c-red
+	cursor: pointer
+	-webkit-appearance: none
+	margin-top: -9px
+
+
+.products__range__this::-moz-range-track 
+	width: 100%
+	height: 8px
+	cursor: pointer
+	animate: 0.2s
+	// box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d
+	background: #C1C1C1
+	border-radius: 1.3px
+	border-radius: 10px
+	border-top: 1px solid #A2A2A2
+	border-bottom: 1px solid $c-white
+
+.products__range__this::-moz-range-thumb 
+	border: 1px solid #000000
+	height: 22px
+	width: 22px
+	border-radius: 3px
+	background: #ffffff
+	cursor: pointer
+
+.products__range__this::-ms-track 
+	width: 100%
+	height: 8.4px
+	cursor: pointer
+	animate: 0.2s
+	background: transparent
+	border-color: transparent
+	border-width: 16px 0
+	color: transparent
+
+.products__range__this::-ms-fill-lower 
+	background: #2a6495
+	border: 0.2px solid #010101
+	border-radius: 2.6px
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d
+
+.products__range__this::-ms-fill-upper 
+	background: #3071a9
+	border: 0.2px solid #010101
+	border-radius: 2.6px
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d
+
+.products__range__this::-ms-thumb 
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d
+	border: 1px solid #000000
+	height: 36px
+	width: 16px
+	border-radius: 3px
+	background: #ffffff
+	cursor: pointer
+
+.products__range__this:focus::-ms-fill-lower 
+	background: #3071a9
+
+.products__range__this:focus::-ms-fill-upper 
+	background: #367ebd
+
+
+.products__range__text
+	color: #a3a3a3
+	font-weight: bold
+	font-size: 15px
+	margin-bottom: 25px
+	text-transform: uppercase
+
+.rangeValue
+	color: $c-red
+	font-weight: bold
+
+
+.products__buttons
+	position: relative
+	// margin-bottom: -15px
+
+.products__buttons__table.select
+	i
+		@include sprite($products-buttons-table-red)
+.products__buttons__list.select
+	i
+		@include sprite($products-buttons-list-red)
+
+
+.products__buttons__button
+	display: inline-block
+	cursor: pointer
+	&:nth-of-type(2)
+		margin-left: 4px
+
+	// .icon-products-buttons-list-white
+	// 	position: relative
+	// 	top: 1px
+
+.product
+	padding-top: 30px
+	padding-bottom: 30px
+.in-table
+	position: relative
+	width: 940px
+	margin: 0 auto
+	.product
+		width: 200px
+		float: left
+		margin-right: 17px
+		margin-left: 17px
+	// &:nth-of-type(5n - 1)
+	// 	margin-right: 0
+	.product__list
+		display: none
+	.product__img-block
+		float: none
+	.product__img
+		float: none
+		padding: 10px
+		width: auto
+		img
+			width: 180px
+	.product__title
+		font-size: 18px
+		line-height: 22px
+		margin-top: 7px
+		padding-bottom: 7px
+	.container, .col
+		width: 100%
+	.drop-down-group
+		display: none
+	.hits__item__group
+		margin-top: 0
+		margin-left: 0
+	.data-product__button-more
+		display: none
+	.hits__item__group
+		width: 100%
+	.data-product__price, .data-product__button
+		width: 50% !important
+		line-height: 30px
+		height: 30px
+		font-size: 15px !important
+		padding: 0
+		font-weight: normal
+		i
+			display: none
+	.product__container
+		padding-left: 0
+		padding-right: 0
+	&.in-table + .reviews_product
+		display: none !important
+.product__title
+	font-size: 30px
+	color: #242424
+	line-height: 35px
+	text-align: left
+
+.product__img-block
+	float: right
+.product__img
+	float: right
+	display: table-cell
+	vertical-align: middle
+	background-color: $c-white
+	text-align: center
+	padding: 75px 55px
+	width: 456px
+	box-sizing: border-box
+	img
+		max-width: 346px
+	
+.product__list
+	margin-top: 15px	
+	
+.product-container
+	// display: none
+	
+
+
+
+.ul-list-7
+	padding-left: 25px
+	position: relative
+	font-size: 20px
+	color: #242424
+	padding-top: 10px
+	padding-bottom: 10px
+	li
+		position: relative
+		margin-bottom: 20px
+		&:before
+			position: absolute
+			display: block
+			content: ''
+			left: -23px
+			top: 8px
+			width: 7px
+			height: 7px
+			background: $c-red
+
+
+.drop-down
+	display: inline-block
+	width: 175px
+	position: relative
+
+	
+.drop-down__name
+	position: relative
+	border: 1px solid #D4D4D4
+	background-color: $c-white
+	border-radius: 2px
+	padding: 9.5px 40px 9.5px 23px
+	box-sizing: border-box
+	font-weight: 300
+	color: #373737
+	cursor: pointer
+	&:after
+		position: absolute
+		content: ''
+		@include sprite($drop-down-arrow)
+		top: 16px
+		right: 17px
+		transition: .3s
+
+	&.rotate
+		&:after
+			transform: rotate(180deg)
+
+
+.drop-down__list
+	display: none
+	z-index: 2
+	position: absolute
+	left: 0
+	top: 105%
+	background-color: $c-white
+	width: 100%
+	border: 1px solid #D4D4D4
+	box-sizing: border-box
+	padding: 10px 10px 5px
+	font-weight: 300
+	font-size: 14px
+	border-radius: 2px
+	.radio
+		display: none
+	label
+		display: block
+		cursor: pointer
+		width: 100%
+	&.block
+		display: block !important
+
+
+.drop-down__list__item
+	margin-bottom: 5px
+
+
+.radio
+	position: relative
+	display: inline-block
+
+
+
+.drop-down-group
+	margin-left: 7px
+	.drop-down
+		margin-left: 5px
+
+
+
+
+.hits__item__group
+	margin-left: 12px
+	margin-top: 33px
+
+
+
+
+.data-product
+
+
+.data-product__price
+	color: #2b2a2a
+	background-color: #DADADA
+	font-size: 27px
+	
+
+.data-product__button
+
+
+
+
+
+
+.data-product__price, .data-product__button, .data-product__button-more
+	float: left
+	width: 153px
+	height: 61px
+	line-height: 61px
+	text-align: center
+	
+
+.data-product__button-more
+	width: 132px
+
+
+
+
+.reviews_product
+	padding-bottom: 80px
+	display: none
+
+
+.reviews__title
+	padding-top: 65px
+	padding-bottom: 55px
+
+
+.reviews__list
+
+.reviews__item
+	padding-left: 60px
+	padding-right: 5px
+	box-sizing: border-box
+
+
+
+
+
+.reviews__name
+	font-size: 22px
+	font-weight: bold
+	margin-bottom: 15px
+	position: relative
+	&:before
+		position: absolute
+		display: block
+		content: ''
+		left: -50px
+		@include sprite($reviews-quotes)
+
+
+.reviews__text
+	font-weight: 300
+	color: #2f2f2f
+
+
+
+
+.reviews__buttons-group
+	margin-top: 13px
+	button
+		display: inline-block
+		margin-right: 8px
+
+
+
+
+
+.plashka
+	font-weight: bold
+	text-transform: uppercase
+	color: #fff
+	background-color: #2C2C2C
+	background: rgb(185,37,46)
+	background: -moz-linear-gradient(left,  rgba(185,37,46,1) 0%, rgba(185,37,46,1) 35%, rgba(44,44,44,1) 36%, rgba(44,44,44,1) 100%)
+	background: -webkit-linear-gradient(left,  rgba(185,37,46,1) 0%,rgba(185,37,46,1) 35%,rgba(44,44,44,1) 36%,rgba(44,44,44,1) 100%)
+	background: linear-gradient(to right,  rgba(185,37,46,1) 0%,rgba(185,37,46,1) 35%,rgba(44,44,44,1) 36%,rgba(44,44,44,1) 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b9252e', endColorstr='#2c2c2c',GradientType=1 )
+	.container
+		background-color: #2C2C2C
+		padding-left: 0
+	a
+		color: #fff
+.plashka__text
+	background-color: $c-red
+	padding-right: 15px
+	padding-left: 15px
+	padding-top: 22.5px
+	padding-bottom: 22.5px
+	position: relative
+	&:after
+		top: 0
+		position: absolute
+		right: -25px
+		content: ''
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 32px 0 32px 25px
+		border-color: transparent transparent transparent $c-red
+
+.plashka__list
+	padding-left: 35px
+.plashka__item
+	margin-left: 26px
+	margin-right: 26px
+	&:last-of-type
+		margin-right: 0
+
+
+.why-we
+	padding-top: 50px
+	padding-bottom: 40px
+
+.why-we__title
+	padding-bottom: 65px
+
+.why-we__list
+	padding-bottom: 64px
+	
+.why-we__list__item
+	width: 33%
+	height: 104px
+	margin-bottom: 45px
+
+.why-we__list__icon
+	z-index: 2
+	position: relative
+	width: 125px
+	height: 104px
+	text-align: center
+	background-image: url("../img/bg/why-we_gray.png")
+	background-repeat: no-repeat
+	// background-color: $c-red
+	// margin-right: 25px
+	&:before
+		z-index: -1
+		top: 0
+		left: 0
+		position: absolute
+		content: ''
+		background-image: url("../img/bg/why-we_red.png")
+		width: 125px
+		height: 104px
+		
+
+.why-we__list__text
+	padding-left: 13px
+	box-sizing: border-box
+
+.why-we__list__icon, .why-we__list__text
+
+	display: table-cell
+	vertical-align: middle
+	font-size: 20px
+	line-height: 20px
+
+.why-we__slider
+	margin-left: 0
+	margin-right: 0
+	.slick-prev
+		left: -75px
+	.slick-next
+		right: -75px
+
+.why-we__slider__item
+	background-color: $c-white
+	height: 100%
+	height: 100%
+	min-height: 225px
+	margin-left: 10px
+	margin-right: 10px
+	border: 1px solid #D4D4D4
+	box-sizing: border-box
+	padding: 22px 25px
+	line-height: 22px
+	color: #2f2f2f
+
+.catalog
+	padding-top: 42px
+
+.catalog__title
+	margin-bottom: 32px
+
+
+.nav-line
+	background-color: #FFF
+	width: 100%
+	text-align: center
+.nav-line__item
+	display: inline-block
+	padding-left: 20px
+	padding-right: 20px
+	padding-top: 15px
+	padding-bottom: 15px
+	border-bottom: 1px solid #C1C1C1
+	border-right: 1px solid #D8D8D8
+	font-size: 17px
+	font-weight: 500
+	color: #303030
+	background: rgb(226,226,226)
+	background: -moz-linear-gradient(top,  rgba(226,226,226,1) 0%, rgba(236,236,236,1) 100%)
+	background: -webkit-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(236,236,236,1) 100%)
+	background: linear-gradient(to bottom,  rgba(226,226,226,1) 0%,rgba(236,236,236,1) 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#ececec',GradientType=0 )
+	cursor: pointer
+	&:last-of-type
+		border-right: 1px solid transparent
+	&.select, &:hover
+		color: $c-white
+		background: none
+		background-color: $c-red
+		border-right: 1px solid $c-red
+		border-bottom: 1px solid $c-red
+	&.select
+		cursor: default
+
+
+
+
+.catalog
+
+
+
+.catalog__img
+	min-height: 460px
+	padding-bottom: 40px
+
+.catalog__img__item
+	display: none
+	text-align: center	
+
+.catalog__img__item.id2, .catalog__img__item.id3, .catalog__img__item.id4, .catalog__img__item.id5, .catalog__img__item.id6, .catalog__img__item.id7
+	padding-top: 90px
+
+
+.for
+	padding-top: 50px
+	padding-bottom: 78px
+	text-align: center
+	color: $c-white
+	font-size: 18px
+	font-weight: bold
+
+.for__title
+	color: $c-black
+	padding-bottom: 40px
+
+.for__item
+	position: relative
+	height: 373px
+
+.for__item__img
+	z-index: 0
+	position: absolute
+	top: 0
+	left: 0
+
+.for__item__bg
+	position: relative
+	z-index: 1
+	padding-top: 240px
+	height: 100%
+	box-sizing: border-box
+
+.for__item__bg_black
+	background: rgba(15,15,15,.56)
+
+.for__item__bg_red
+	background: rgba(187,29,38,.81)
+
+
+
+.hits
+	padding-top: 80px
+	padding-bottom: 80px
+	text-align: center
+
+.hits__title
+	padding-bottom: 65px
+
+.hits__item
+	border: 1px solid #EAEAEA
+	width: 300px
+	height: 465px
+	padding-top: 45px
+	&:nth-of-type(2)
+		margin-left: 10px
+		margin-right: 10px
+	.data-product
+		.data-product__price, .data-product__button
+			width: 50%
+	.color-gray
+		color: #939393
+
+.hits__item__img
+	text-align: center
+	height: 215px
+	width: 100%
+	img
+		max-width: 215px
+		max-height: 215px
+		line-height: 215px
+
+.hits__item__title
+	color: #1f1f1f
+	font-size: 21px
+	margin-top: 18px
+
+
+.hits__item__data
+	margin-top: 20px
+	margin-bottom: 20px
+	line-height: 30px
+
+.hits__item__data__item
+	position: relative
+	&:before
+	    position: relative
+	    display: inline-block
+	    content: ''
+	    left: 0px
+	    top: -3px
+	    width: 5px
+	    height: 5px
+	    background: #bb1d26
+	    margin-right: 7px
+
+
+.categories
+	padding-top: 65px
+	padding-bottom: 60px
+	text-align: center
+
+.categories__container
+	padding-left: 6.7px	
+	padding-right: 6.7px
+
+.categories__title
+	padding-bottom: 45px
+
+.categories__item
+	height: 230px
+	margin-left: 3.3px	
+	margin-right: 3.3px
+	width: 150px
+	padding-top: 50px
+
+.categories__item__img
+	display: inline-block
+	vertical-align: middle
+	height: 100px
+	line-height: 100px
+	text-align: center
+	width: 100%
+
+.categories__item__title
+	font-size: 17px
+	font-weight: 500
+	margin-top: 20px
+	text-transform: uppercase
+
+
+.collection
+	padding-top: 70px
+	padding-bottom: 72px
+
+.collection__title
+	padding-bottom: 35px
+
+.collection__nav__item
+	padding-left: 21.5px
+	padding-right: 21.5px
+	margin-bottom: 48px
+
+.collection__list__title
+	text-align: left
+	font-size: 30px
+	margin-bottom: 20px 
+
+.collection__list__item
+	border: 1px solid #DCDCDC
+	height: 260px
+	margin-bottom: 28px
+	&.position-3
+		.collection__list__item__here
+			width: 227.3px
+			img
+				width: 140px
+				height: 140px
+	&.position-2
+		.collection__list__item__here
+			width: 340.9px
+			img
+				width: 140px
+				height: 140px
+			&:nth-of-type(3)
+				&:after
+					@include sprite($equally)
+					top: 50%
+
+
+
+.collection__list__item__name
+	position: relative
+	width: 80px
+	height: 100%
+	font-size: 23px
+	text-align: center
+	font-family: $ff2
+	span
+		margin-top: 170px
+		display: block
+		transform: rotate(-90deg)
+		&.v2
+			margin-top: 180px
+
+.collection__list__item__here
+	border-right: 1px solid #DCDCDC
+	box-sizing: border-box
+	height: 100%
+	position: relative
+	img
+		display: block
+		margin-left: auto
+		margin-right: auto
+		margin-top: 55px
+	&:before
+		content: ''
+		position: absolute
+		display: block
+		right: -18.5px
+		top: 45%
+		width: 37px
+		height: 37px
+		background-color: #EAEAEA
+		border-radius: 50%
+	&:after
+		position: absolute
+		content: ''
+		top: 49%
+		right: -9px
+		@include sprite($plus)
+	&:nth-of-type(4)
+		&:after
+			@include sprite($equally)
+			top: 50%
+
+
+
+.collection__list__item__here__name
+	padding-left: 15px
+	font-weight: 500
+	line-height: 20px
+	margin-top: 13px
+	color: #1b1b1b
+
+.collection__list__item__data
+	float: right
+	width: 176.1px
+	text-align: center
+	height: 100%
+	background-color: #F7F7F7
+	padding-top: 80px
+	box-sizing: border-box
+
+.collection__list__item__data__price
+	font-family: $ff2
+	font-size: 35px
+
+.collection__list__item__data__price-past
+	font-size: 20px
+	color: #444444
+	text-decoration: line-through
+	margin-top: 5px
+	margin-bottom: 15px
+
+.collection__list__item__data__button
+	width: 146px
+	margin-left: auto
+	margin-right: auto
+	line-height: 45px
+
+
+.collection__list__item__name, .collection__list__item__here
+	float: left
+
+
+
+.cart
+	padding-top: 70px
+	padding-bottom: 60px
+
+.cart__title
+	padding-bottom: 55px
+
+.table
+	padding: 15px 40px 0
+
+
+.table__row
+	border-bottom: 1px solid #EAEAEA
+	padding-top: 18px
+	padding-bottom: 18px
+	&.light
+		.table__col
+			font-weight: 300 !important
+			font-size: 15px
+			line-height: normal
+	&:last-of-type
+		border-bottom: 0
+		padding-bottom: 80px
+
+.table__col
+	&:nth-of-type(1)
+		width: 65%
+		font-weight: 500
+		line-height: 22px
+	&:nth-of-type(2)
+		width: 35%
+		font-size: 20px
+
+.cart__list
+	position: relative
+	padding-bottom: 77px
+	&:before
+		display: block
+		content: ''
+		position: absolute
+		top: 49%
+		right: -20px
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 15px 0 15px 20px
+		border-color: transparent transparent transparent $c-white
+
+.cart__summary
+	position: absolute
+	background-color: #F0F0F0
+	font-size: 27px
+	font-weight: 500
+	padding-top: 22px
+	padding-bottom: 22.5px
+	width: 100%
+	bottom: 0
+	.col
+		width: 50%
+		text-align: center
+
+
+.cart__order
+	padding: 43px 53px 35px
+
+
+
+
+
+
+
+.reviews__button__back
+	display: block
+	margin-left: auto
+	margin-right: auto
+	border-radius: 3px
+	line-height: 58px
+	padding: 0 22px 0 18px
+	font-size: 16px
+	font-weight: bold
+	text-transform: uppercase
+	margin-top: 70px
+	i
+		position: relative
+		top: 7px
+		margin-right: 5px
+
+
+
+.pay-delivery
+	padding-top: 55px
+	padding-bottom: 10px
+
+.pay-delivery__title
+	padding-bottom: 65px
+
+
+.pay-delivery__col__title
+	font-size: 22px
+	text-align: left
+	margin-bottom: 50px
+	color: $c-red
+	position: relative
+	i
+		position: absolute
+		left: -80px
+		top: -15px
+
+
+.pay-delivery__col
+	padding-left: 75px 
+
+.pay-delivery__col__ul
+	font-size: 22px
+	padding-left: 25px
+
+.pay-delivery__col__li
+	list-style-type: decimal
+	line-height: 44px
+
+
+
+
+.footer
+	padding-top: 90px
+	padding-bottom: 75px
+	background-repeat: no-repeat
+	background-position: center bottom
+	background-image: url("../img/bg/bottom.png")
+
+.footer__copy
+	padding-top: 18px
+	margin-left: 90px
+
+.footer__copy__link
+	margin-top: 20px
+	font-weight: 300
+	font-size: 15px
+	color: #2f2f2f
+	border-bottom: 1px solid #2f2f2f
+	cursor: pointer
+
+.footer__socials__item
+	margin-right: 2px
+
+.footer__feedback
+	
+
+.footer__feedback__button
+	float: right
+
+.footer__feedback__phone
+	font-size: 21px

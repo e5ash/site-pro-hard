@@ -1,0 +1,307 @@
+/*
+  SASS variables are information about icon's compiled state, stored under its original file name
+
+  .icon-home
+    width: $icon-home-width
+
+  The large array-like variables contain all information about a single icon
+  $icon-home: x y offset_x offset_y width height total_width total_height image_path
+
+  At the bottom of this section, we provide information about the spritesheet itself
+  $spritesheet: width height image $spritesheet-sprites
+  */
+/*
+  The provided mixins are intended to be used with the array-like variables
+
+  .icon-home
+    @include sprite-width($icon-home)
+
+  .icon-email
+    @include sprite($icon-email)
+
+  Example usage in HTML:
+    `display: block` sprite:
+    <div class="icon-home"></div>
+
+  To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class: */
+/*
+  The `sprites` mixin generates identical output to the CSS template
+    but can be overridden inside of SASS
+
+  @include sprites($spritesheet-sprites)
+  */
+i.icon-advantages-cart {
+  background-image: url(../img/sprite.png);
+  background-position: -49px -223px;
+  width: 44px;
+  height: 37px; }
+
+i.icon-advantages-price {
+  background-image: url(../img/sprite.png);
+  background-position: -228px -190px;
+  width: 31px;
+  height: 33px; }
+
+i.icon-advantages-quality {
+  background-image: url(../img/sprite.png);
+  background-position: -228px -140px;
+  width: 38px;
+  height: 50px; }
+
+i.icon-cart {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -264px;
+  width: 18px;
+  height: 14px; }
+
+i.icon-categories-cap {
+  background-image: url(../img/sprite.png);
+  background-position: -112px -100px;
+  width: 65px;
+  height: 52px; }
+
+i.icon-categories-clothing {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -100px;
+  width: 60px;
+  height: 65px; }
+
+i.icon-categories-gloves {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 100px;
+  height: 100px; }
+
+i.icon-categories-helmets {
+  background-image: url(../img/sprite.png);
+  background-position: -100px 0px;
+  width: 71px;
+  height: 79px; }
+
+i.icon-categories-pear {
+  background-image: url(../img/sprite.png);
+  background-position: -171px 0px;
+  width: 57px;
+  height: 83px; }
+
+i.icon-categories-protection-for-feet {
+  background-image: url(../img/sprite.png);
+  background-position: -60px -100px;
+  width: 52px;
+  height: 65px; }
+
+i.icon-delivery {
+  background-image: url(../img/sprite.png);
+  background-position: -58px -165px;
+  width: 58px;
+  height: 58px; }
+
+i.icon-drop-down-arrow {
+  background-image: url(../img/sprite.png);
+  background-position: -274px -255px;
+  width: 15px;
+  height: 8px; }
+
+i.icon-equally {
+  background-image: url(../img/sprite.png);
+  background-position: -112px -152px;
+  width: 17px;
+  height: 10px; }
+
+i.icon-modal-close {
+  background-image: url(../img/sprite.png);
+  background-position: -259px -207px;
+  width: 11px;
+  height: 11px; }
+
+i.icon-pay {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -165px;
+  width: 58px;
+  height: 58px; }
+
+i.icon-plus {
+  background-image: url(../img/sprite.png);
+  background-position: -171px -83px;
+  width: 18px;
+  height: 17px; }
+
+i.icon-products-buttons-list-red {
+  background-image: url(../img/sprite.png);
+  background-position: -100px -79px;
+  width: 21px;
+  height: 21px; }
+
+i.icon-products-buttons-list-white {
+  background-image: url(../img/sprite.png);
+  background-position: -121px -79px;
+  width: 21px;
+  height: 21px; }
+
+i.icon-products-buttons-table-red {
+  background-image: url(../img/sprite.png);
+  background-position: -142px -79px;
+  width: 20px;
+  height: 21px; }
+
+i.icon-products-buttons-table-white {
+  background-image: url(../img/sprite.png);
+  background-position: -245px -223px;
+  width: 20px;
+  height: 20px; }
+
+i.icon-reviews-bookmark_gray {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -278px;
+  width: 12px;
+  height: 17px; }
+
+i.icon-reviews-bookmark_red {
+  background-image: url(../img/sprite.png);
+  background-position: -259px -190px;
+  width: 12px;
+  height: 17px; }
+
+i.icon-reviews-chat {
+  background-image: url(../img/sprite.png);
+  background-position: -274px -31px;
+  width: 25px;
+  height: 24px; }
+
+i.icon-reviews-heart_gray {
+  background-image: url(../img/sprite.png);
+  background-position: -207px -83px;
+  width: 18px;
+  height: 16px; }
+
+i.icon-reviews-heart_red {
+  background-image: url(../img/sprite.png);
+  background-position: -189px -83px;
+  width: 18px;
+  height: 16px; }
+
+i.icon-reviews-quotes {
+  background-image: url(../img/sprite.png);
+  background-position: -189px -223px;
+  width: 32px;
+  height: 29px; }
+
+i.icon-slider-arrow-left_gray {
+  background-image: url(../img/sprite.png);
+  background-position: -274px -55px;
+  width: 21px;
+  height: 28px; }
+
+i.icon-slider-arrow-left_red {
+  background-image: url(../img/sprite.png);
+  background-position: -274px -83px;
+  width: 21px;
+  height: 28px; }
+
+i.icon-socials-fb {
+  background-image: url(../img/sprite.png);
+  background-position: -274px -135px;
+  width: 24px;
+  height: 24px; }
+
+i.icon-socials-in {
+  background-image: url(../img/sprite.png);
+  background-position: -274px -159px;
+  width: 24px;
+  height: 24px; }
+
+i.icon-socials-insta {
+  background-image: url(../img/sprite.png);
+  background-position: -274px -183px;
+  width: 24px;
+  height: 24px; }
+
+i.icon-socials-ok {
+  background-image: url(../img/sprite.png);
+  background-position: -274px -111px;
+  width: 24px;
+  height: 24px; }
+
+i.icon-socials-tw {
+  background-image: url(../img/sprite.png);
+  background-position: -274px -231px;
+  width: 24px;
+  height: 24px; }
+
+i.icon-socials-vk {
+  background-image: url(../img/sprite.png);
+  background-position: -221px -223px;
+  width: 24px;
+  height: 24px; }
+
+i.icon-socials-yt {
+  background-image: url(../img/sprite.png);
+  background-position: -274px -207px;
+  width: 24px;
+  height: 24px; }
+
+i.icon-tel {
+  background-image: url(../img/sprite.png);
+  background-position: -93px -223px;
+  width: 43px;
+  height: 36px; }
+
+i.icon-ul-list {
+  background-image: url(../img/sprite.png);
+  background-position: -289px -255px;
+  width: 7px;
+  height: 7px; }
+
+i.icon-why-we-delivery {
+  background-image: url(../img/sprite.png);
+  background-position: -136px -223px;
+  width: 53px;
+  height: 29px; }
+
+i.icon-why-we-money {
+  background-image: url(../img/sprite.png);
+  background-position: -116px -165px;
+  width: 56px;
+  height: 56px; }
+
+i.icon-why-we-partners {
+  background-image: url(../img/sprite.png);
+  background-position: -172px -165px;
+  width: 54px;
+  height: 54px; }
+
+i.icon-why-we-price {
+  background-image: url(../img/sprite.png);
+  background-position: -274px 0px;
+  width: 25px;
+  height: 31px; }
+
+i.icon-why-we-quality {
+  background-image: url(../img/sprite.png);
+  background-position: -228px -45px;
+  width: 40px;
+  height: 51px; }
+
+i.icon-why-we-range {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -223px;
+  width: 49px;
+  height: 41px; }
+
+i.icon-why-we-service {
+  background-image: url(../img/sprite.png);
+  background-position: -177px -100px;
+  width: 42px;
+  height: 52px; }
+
+i.icon-why-we-star {
+  background-image: url(../img/sprite.png);
+  background-position: -228px -96px;
+  width: 45px;
+  height: 44px; }
+
+i.icon-why-we-thumb-up {
+  background-image: url(../img/sprite.png);
+  background-position: -228px 0px;
+  width: 46px;
+  height: 45px; }
